@@ -1,0 +1,97 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff; /* Cor de fundo */
+}
+
+.card {
+    --main-color: #020000;
+    --submain-color: #000000;
+    --bg-color: rgb(0, 0, 0);
+    font-family: system-ui, sans-serif;
+    position: relative;
+    width: 350px; /* largura*/
+    height: 470px; /* Aumentei a altura */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(43, 42, 42, 0.989);
+    overflow: hidden;
+}
+
+.card__img {
+    height: 192px;
+    width: 100%;
+    background: url('cartão fundo.png') no-repeat center center;
+    background-size: cover;
+}
+
+.card__avatar {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--bg-color);
+    border: 2px solid var(--main-color);
+    overflow: hidden;
+    margin-top: -35px; /* Ajustei para melhor centralização */
+}
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card__title {
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: 20px;
+    color: var(--main-color);
+}
+
+.card__subtitle {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--submain-color);
+    text-align: center; /* Centraliza o texto */
+    width: 100%; /* Garante que o elemento ocupe toda a largura disponível */
+}
+
+/* Espaço aumentado entre avatar e redes sociais */
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px; /* Aumentei o espaçamento */
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.2s;
+    border: 2px solid #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons img {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
